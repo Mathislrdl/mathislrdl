@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Méta-informations -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Contact</title>
+
+    <!-- Feuilles de style -->
+    <link rel="stylesheet" href="stylecontact.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chemins vers les icônes -->
+    <link rel="icon" href="chemin/vers/votre-logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="image/ml-logo-conseil-aux-entreprises_296091-1107.jpg">
+
+
+</head>
+
+<body>
+
+<!-- En-tête (Header) avec la barre de navigation -->
+<header>
+    <nav>
+        <!-- Menu de navigation -->
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="CV%20mieux.html">Mon CV</a></li>
+            <li><a href="Lettredemotivation.html">Lettre de motivation</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Formulaire de contact dans une div avec classe "container" -->
+<div class="container">
+    <form class="contact-form" action="contact%20base.php" method="post">
+
+        <!-- Titre du formulaire -->
+        <h2>Contactez-moi</h2>
+
+        <!-- Champ pour le nom -->
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="nom" placeholder="Votre nom" required>
+
+        <!-- Champ pour l'email -->
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" placeholder="Votre email" required>
+
+        <!-- Champ pour le message -->
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" placeholder="Écrivez votre message" required></textarea>
+
+        <!-- Bouton d'envoi du formulaire -->
+        <button type="submit">Envoyer</button>
+    </form>
+</div>
+<!-- Section de contact -->
+<section id="contact" style="display: none;">
+    <?php require 'include/contact.html' ?>
+    <!-- Message de confirmation -->
+    <div id="confirmation-message">
+        <p>Merci ! Votre message a été envoyé avec succès.</p>
+    </div>
+</section>
+
+
+
+<div class="container">
+    <a href="index.html">
+        <button class="back-button" onclick="window.location.href='index.html'">Retour à l'accueil</button>
+    </a>
+</div>
+
+</body>
+
+</html>
+
+
