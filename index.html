@@ -47,9 +47,9 @@
 
 <!-- Section principale -->
 <section>
-    <!-- Centrer le contenu -->
+
     <center>
-        <!-- Titre de bienvenue -->
+        <!-- Titre -->
         <h2>Bienvenue sur mon portfolio !</h2>
         <!-- Description du portfolio -->
         <p>Enthousiaste et créatif, je suis passionné par l'informatique et déterminé à partager mon parcours professionnel et mes réalisations. Mon portfolio reflète mon engagement envers l'excellence, mettant en lumière mes compétences, projets et contributions dans le domaine de l'informatique.</p>
@@ -58,10 +58,13 @@
 
 <!-- Pied de page (Footer) -->
 <footer>
-    <!-- Droits d'auteur -->
-    <p>&copy; 2023 Mathis Lourdel.</p>
-</footer>
+    <p>Date: <span id="date"></span></p>
+    <p>&copy; 2024 Mathis Lourdel. </p>
 
+</footer>
+<script>
+    document.getElementById("date").innerHTML = new Date().toLocaleDateString();
+</script>
 </body>
 
 </html>
